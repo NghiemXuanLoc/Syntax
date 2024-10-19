@@ -1,0 +1,11 @@
+dotnet ef migrations migrationName		(add 1 migration mới)
+
+dotnet ef migrations list			(danh sách các migration)
+
+dotnet ef migrations remove			(xoa migration cuối cùng được tạo ra)
+
+dotnet ef database update			(update lên database tới phiên bản migration cuối cùng)
+
+dotnet ef database update [migrationName]	(update lên database tới phiên bản cụ thể có thể migrationName)	
+
+dotnet ef database drop -f			(Xóa database)
