@@ -1,52 +1,52 @@
-git init				<Khỏi tạo kho chứa git local>
+git init				                <Khỏi tạo kho chứa git local>
 
 
 
-git log --oneline			<kiem tra cac commit>
+git log --oneline			            <kiem tra cac commit>
 
-git status				<kiem tra xem working directory va .git dicectory có gì khác nhau không(tức là so 					sánh thư mục làm việc hiện tại với commit cuối)>
+git status				                <kiem tra xem working directory va .git dicectory có gì khác nhau không(tức là so sánh thư mục làm việc hiện tại với commit cuối)>
 
-git add . 				<đưa nội dung sửa đổi vào trạng thái Staging để chuẩn bị commit>
+git add . 				                <đưa nội dung sửa đổi vào trạng thái Staging để chuẩn bị commit>
 
-git commit -m"content message"		<đưa tất cả file trong Staging vào kho chứa git(.git derectory)>
+git commit -m"content message"		    <đưa tất cả file trong Staging vào kho chứa git(.git derectory)>
 
-git restore ten_file			<phục hồi file đã bị xóa trong staging>
+git restore ten_file			        <phục hồi file đã bị xóa trong staging>
 
-git restore .				<phục hồi tất cả các file đã bị xóa trong staging>
+git restore .				            <phục hồi tất cả các file đã bị xóa trong staging>
 
-git restore -- .			<phục hồi tất cả các file về trạng thái staged>
+git restore -- .			            <phục hồi tất cả các file về trạng thái staged>
 
-git diff				<hiển thị sự thay đổi của những file đã sửa đổi so với commit cuối trong staging>
+git diff				                <hiển thị sự thay đổi của những file đã sửa đổi so với commit cuối trong staging>
 
-git checkout id_commit -- .		<phục hồi tất cả file về trạng thái cua 1 commit nào đó(có thể thay . bang tên file 					cụ thể, tức là chỉ phục hồi 1 file nào đó) file muốn phục hồi ở commit cũ phải tồn 					tại>
-
-
-git restore --staged <file>		<đưa file ra khỏi vùng staged(sau khi dung lệnh git checkout id_commit thì các file 					được lưu sẵn ở vùng staged)>
+git checkout id_commit -- .		        <phục hồi tất cả file về trạng thái cua 1 commit nào đó(có thể thay . bang tên file cụ thể, tức là chỉ phục hồi 1 file nào đó) file muốn phục hồi ở commit cũ phải tồn 					tại>
 
 
-git commit --amend -m"noi dung commit" <đưa tất cả các file vào kho chứa git(nhưng kh tạo ra commit mới mà gộp vào commit 					cuối cùng. Dùng cho trường hợp có ít sự thay đổi, hoặc lần commit trước đó bị thiếu 					nội dung mà chúng ta lại kh muốn tạo ra commit mới)>
+git restore --staged <file>		        <đưa file ra khỏi vùng staged(sau khi dung lệnh git checkout id_commit thì các file được lưu sẵn ở vùng staged)>
 
-git diff id_commit1 id_commit2		<so sánh sự khác nhau giữa 2 commit>
 
-git reset --soft HEAD~1			<xóa commit cuối cùng trong git repository, lưu các thay đổi vào vùng staging(Đảm 					bảo rang khi dung git reset thì commit chưa được push lên kho chứa git online)>
+git commit --amend -m"noi dung commit"  <đưa tất cả các file vào kho chứa git(nhưng kh tạo ra commit mới mà gộp vào commit 	cuối cùng. Dùng cho trường hợp có ít sự thay đổi, hoặc lần commit trước đó bị thiếu 					nội dung mà chúng ta lại kh muốn tạo ra commit mới)>
 
-git reset --hard HEAD~1			<xóa hẳn commit, không có cơ hội sửa đổi(Đảm 										bảo rang khi dung git reset thì commit chưa được push lên kho chứa git online)>
+git diff id_commit1 id_commit2		    <so sánh sự khác nhau giữa 2 commit>
 
-git reset -- <file>			<đưa file ở trạng thái staged quay về modifier>
+git reset --soft HEAD~1			        <xóa commit cuối cùng trong git repository, lưu các thay đổi vào vùng staging(Đảm bảo rang khi dung git reset thì commit chưa được push lên kho chứa git online)>
 
-git branch				<hiển thị các nhánh của kho chứa git>
+git reset --hard HEAD~1			        <xóa hẳn commit, không có cơ hội sửa đổi(Đảm bảo rang khi dung git reset thì commit chưa được push lên kho chứa git online)>
 
-git branch <ten_nhanh>			<tạo nhánh mới>
+git reset -- <file>			            <đưa file ở trạng thái staged quay về modifier>
+
+git branch				                <hiển thị các nhánh của kho chứa git>
+
+git branch <ten_nhanh>			        <tạo nhánh mới>
  
-git checkout <ten_nhanh>		<chuyển sang 1 nhánh khác>
+git checkout <ten_nhanh>		        <chuyển sang 1 nhánh khác>
 
-git switch <ten_nhanh>			<chuyển sang 1 nhánh khác>
+git switch <ten_nhanh>			        <chuyển sang 1 nhánh khác>
 
-git branch -d <ten_nhanh> 		<xóa 1 nhánh bất kì>
+git branch -d <ten_nhanh> 		        <xóa 1 nhánh bất kì>
 
-git merge <ten_nhanh>			<merge (ten_nhanh_ vào nhánh hiện tại)>
+git merge <ten_nhanh>			        <merge (ten_nhanh_ vào nhánh hiện tại)>
 
-git merge --abort			<hủy merge(sau khi merge các nhánh xảy ra config sử dung lệnh trên để hủy bỏ 						đưa về trạng thái trước khi merge của nhánh muốn merge>
+git merge --abort			            <hủy merge(sau khi merge các nhánh xảy ra config sử dung lệnh trên để hủy bỏ đưa về trạng thái trước khi merge của nhánh muốn merge)>
 
 ===========================
 nếu như kh dung vscode để fix config thì có thể dung câu lệnh (git mergetool)
@@ -61,9 +61,9 @@ nội dung do dánh A sửa đổi sẽ là "Incoming Change"
 ===========================
 
 
-git log --oneline --graph		<hiển thị sơ đồ chi tiết về các commit(trong trường hợp có merge branch)>
+git log --oneline --graph		        <hiển thị sơ đồ chi tiết về các commit(trong trường hợp có merge branch)>
 
-git checkout id_commit			<đưa con trỏ HEAD về 1 commit cụ thể>
+git checkout id_commit			        <đưa con trỏ HEAD về 1 commit cụ thể>
 
 
 
