@@ -1,4 +1,4 @@
-dotnet ef migrations migrationName		        (add 1 migration mới)
+dotnet ef migrations add migrationName		    (add 1 migration mới)
 
 dotnet ef migrations list			            (danh sách các migration)
 
