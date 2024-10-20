@@ -1,3 +1,5 @@
+===================================tương tác với git local ====================================================
+
 git init				                <Khỏi tạo kho chứa git local>
 
 
@@ -74,4 +76,40 @@ git log --oneline --graph		        <hiển thị sơ đồ chi tiết về các 
 git checkout id_commit			        <đưa con trỏ HEAD về 1 commit cụ thể>
 
 
+
+
+
+======================================== Tương tác với git repository ================================
+
+git branch -a									<hiển thị các branch ở trên local và remote>
+
+git remote										<hiển thị các remote mà local đang làm việc, tương tác>
+
+git remote -v									<xem chi tiết địa chỉ kết nối của remote>
+
+git remote rm <ten_remote>						<xóa đi remote khỏi local>
+
+git remote add <ten_remote>						<thực hiện liên kết git local với git remote>
+
+nếu như lần đầu up code lên remote thì thêm tham số "-u" phía trước <ten_remote> để branch local có thể theo dỗi remote branch(để sử dụng git push, git pull mà kh cần gõ tên nhánh cụ thể)
+
+git push <ten_remote> <ten_nhanh_tren_remote> 	<thực hiện đẩy code lên remote(nhánh cụ thể)>
+
+git push <ten_remote> --all					 	<thực hiện đẩy code lên remote(tất cả các nhánh)>
+
+git push --delete <ten_remote> <ten_nhanh_xoa>	<thực hiện xóa 1 branch trên remote>
+
+git clone <dia_chi_luu_tru_git>					<tải về 1 kho chứa remote>
+
+git fetch										<cập nhật thông tin mới có từ remote(những dữ liệu này kh cập nhật ngay vào git local, nhưng vẫn có thể dùng các câu lệnh để tương tác với dữ liệu đó)>
+
+git fetch <ten_remote>
+
+git merge <ten_remote>/<ten_nhanh>				<tiến hành merge code trên remove về local>
+
+git pull(git fetch + git merge)					<cập nhật những commit mới từ remote về local>
+
+git pull <ten_remote> <ten_nhanh>				<cập nhật những commit mới nhất từ (ten_remote) về local (ten_nhanh) cụ thể>
+
+git pull <ten_remote> --all						<cập nhật những commit mới nhất từ (ten_remote) về local (tất cả các nhánh)>
 
