@@ -44,9 +44,15 @@ git switch <ten_nhanh>			        <chuyển sang 1 nhánh khác>
 
 git branch -d <ten_nhanh> 		        <xóa 1 nhánh bất kì>
 
-git merge <ten_nhanh>			        <merge (ten_nhanh_ vào nhánh hiện tại)>
+git merge <ten_nhanh>			        <merge (ten_nhanh_ vào nhánh hiện tại) giữ nguyên lịch sử commit(cơ chế merge dựa vào 3 commit cơ bản: commit base, commit cuối của ten_nhanh, commit cuối của nhánh hiện tại). nếu sau khi merge mà xảy ra confict(giả sử đã fix hết confict) thì sẽ tạo ra 1 commit mới, còn nếu như kh xảy ra confict thì sẽ kh tạo commit mới>
 
 git merge --abort			            <hủy merge(sau khi merge các nhánh xảy ra config sử dung lệnh trên để hủy bỏ đưa về trạng thái trước khi merge của nhánh muốn merge)>
+
+git rebase <ten_nhanh>					<rebase ten_nhanh vào nhánh hiện tại(thay đổi lịch sử commit) các commit của ten_nhanh sẽ là commit cơ sở của nhánh hiện tại, lần lượt theo sau chính là commit của nhánh hiện tại>
+
+git rebase --continue					<nếu rebase xảy ra conflict, sau khi fix conflict dùng lệnh trên để tiếp tục rebase>
+
+git rebase --skip						<bỏ qua commit gây ra conflict>
 
 ===========================
 nếu như kh dung vscode để fix config thì có thể dung câu lệnh (git mergetool)
@@ -58,6 +64,8 @@ ta có 2 nhánh A và B, ta tiến hành merge nhánh A vào nhánh B(lúc này 
 nội dung do dánh B sửa đổi sẽ là "Current Change"
 
 nội dung do dánh A sửa đổi sẽ là "Incoming Change"
+
+nếu như dùng rebase thì ngược lại(lí do: các commit của nhánh A sẽ trở thành commit  cơ sở, commit của nhánh B sẽ theo sau)
 ===========================
 
 
