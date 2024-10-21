@@ -34,6 +34,11 @@ git reset --soft HEAD~1			        <xóa commit cuối cùng trong git repository
 
 git reset --hard HEAD~1			        <xóa hẳn commit, không có cơ hội sửa đổi(Đảm bảo rang khi dung git reset thì commit chưa được push lên kho chứa git online)>
 
+git reset --hard HEAD <commit_id>		<xóa hẳn commit, sẽ xóa từ commit mới nhất cho tới commit_id, không có cơ hội sửa đổi(Đảm bảo rang khi dung git reset thì commit chưa được push lên kho chứa git online)>
+
+git revert <commit_id>					<sẽ tạo ra 1 commit mới, đảo ngược commit_id mà bạn muốn quay về, mà kh làm ảnh hưởng đến lịch sử commit(phù hợp cho làm việc nhóm)>
+
+
 git reset -- <file>			            <đưa file ở trạng thái staged quay về modifier>
 
 git branch				                <hiển thị các nhánh của kho chứa git>
@@ -98,6 +103,8 @@ git push <ten_remote> <ten_nhanh_tren_remote> 	<thực hiện đẩy code lên r
 git push <ten_remote> --all					 	<thực hiện đẩy code lên remote(tất cả các nhánh)>
 
 git push --delete <ten_remote> <ten_nhanh_xoa>	<thực hiện xóa 1 branch trên remote>
+
+git push --force						<ép buộc các commit trên remote thay đổi theo các commit trên local>
 
 git clone <dia_chi_luu_tru_git>					<tải về 1 kho chứa remote>
 
