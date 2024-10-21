@@ -80,6 +80,7 @@ git log --oneline --graph		        <hiển thị sơ đồ chi tiết về các 
 
 git checkout id_commit			        <đưa con trỏ HEAD về 1 commit cụ thể>
 
+git revert <commit_id>					<tạo ra 1 commit mới đảo ngược những thay đổi được thực hiện bởi (commit_id)>
 
 
 
