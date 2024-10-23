@@ -123,3 +123,20 @@ git pull <ten_remote> <ten_nhanh>				<cập nhật những commit mới nhất t
 
 git pull <ten_remote> --all						<cập nhật những commit mới nhất từ (ten_remote) về local (tất cả các nhánh)>
 
+
+=================================Tag trong git=================================
+tag dùng để đánh dấu 1 commit được coi là quan trọng, thay vì sử dụng commit_id để tương tác với git, giờ đây ta có thể dùng tên tag thay cho commit_id tương ứng
+
+git tag 												<liệt kê tất cả các tag>
+
+git tag -a "<ten_tag>" -m "message tag" <commit_id>		<thêm 1 tag mới, nếu kh chỉ ra commit_id thì mặc định sẽ lấy commit cuối cùng>
+
+git show <ten_tag>										<hiển thị chi tiết của tag>
+
+git tag -d <ten_tag>									<xóa 1 tag>
+
+git push <ten_remote> <ten_tag>							<đẩy 1 tag lên remote>
+
+git push <ten_remote> --tags							<đẩy tất cả tag lên remote>
+
+git push --delete <ten_remote> <ten_tag>				<xóa 1 tag trên remote(xóa tag ở local trước)>
