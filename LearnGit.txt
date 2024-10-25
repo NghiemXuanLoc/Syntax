@@ -140,3 +140,5 @@ git push <ten_remote> <ten_tag>							<đẩy 1 tag lên remote>
 git push <ten_remote> --tags							<đẩy tất cả tag lên remote>
 
 git push --delete <ten_remote> <ten_tag>				<xóa 1 tag trên remote(xóa tag ở local trước)>
+
+git checkout --orphan <ten_branch>						<tạo 1 branch mới mà kh có bất kì commit cũ nào(branch trống rỗng)>
